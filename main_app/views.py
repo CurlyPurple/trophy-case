@@ -9,3 +9,6 @@ def home(request):
 
 def about(request):
   return render(request, 'about.html')
+
+def goal_index(request):
+  return HttpResponse('<h1>hi goals</h1>')

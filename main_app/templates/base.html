@@ -9,7 +9,7 @@
   <link
     rel="shortcut icon"
     type="image/png"
-    href=""
+    href="{% static "images/podium.png" %}"
   >
   <title>Trophy Case</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
@@ -21,13 +21,14 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src=""
-          alt=""
+          src="{% static "images/podium.png" %}"
+          alt="Podium for medaling"
         >
       </a>
     </div>
     <nav>
       <ul>
+        <li><a href="/goals">All Goals</a></li>
         <li><a href="/about">About</a></li>
       </ul>
     </nav>
