@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Goal(models.Model):
@@ -13,3 +14,7 @@ class Goal(models.Model):
 
   def __str__(self):
     return self.name
+  
+  def get_absolute_url(self):
+      return reverse("goal_detail", kwargs={"goal_id": self.id})
+  

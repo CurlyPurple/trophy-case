@@ -19,7 +19,10 @@
     <h1>{{ goal.name }}</h1>
     <h4>{{ goal.determination }} days a week</h4>
     <p>{{ goal.description }}</p>
-
+    <div class="goal-actions">
+      <a href="{% url 'goal-update' goal.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'goal-delete' goal.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 

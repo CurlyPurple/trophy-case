@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/">
+      <a href="{% url 'home' %}">
         <img 
           src="{% static "images/podium.png" %}"
           alt="Podium for medaling"
@@ -28,8 +28,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/goals">All Goals</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="{% url 'goal-index' %}">All Goals</a></li>
+        <li><a href="{% url 'goal-create' %}">Add a Goal</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
   </header>

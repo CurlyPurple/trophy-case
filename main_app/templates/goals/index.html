@@ -4,7 +4,7 @@
   {% for goal in goals %}
     <div class="card">
       {% comment %} Add this line {% endcomment %}
-      <a href="% url 'goal-detail' goal.id %}">
+      <a href="{% url 'goal-detail' goal.id %}">
         <div class="card-content">
           <div class="card-img-container">
             
