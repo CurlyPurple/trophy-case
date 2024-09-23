@@ -1,14 +1,12 @@
 from django.shortcuts import render
+from .models import Goal
 
-# Add the following import
-from django.http import HttpResponse
-
-# Define the home view
 def home(request):
-  return HttpResponse('<h1>Hello ᓚᘏᗢ</h1>')
+  return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')
 
 def goal_index(request):
-  return HttpResponse('<h1>hi goals</h1>')
+  goals = Goal.objects.all()
+  return render(request, 'goals/index.html', { 'goals': goals})
