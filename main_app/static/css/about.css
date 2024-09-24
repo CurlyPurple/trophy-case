@@ -3,7 +3,11 @@ h1 {
 }
 
 .page-content {
+  width: 475px;
+  border: var(--borders);
+  box-shadow: var(--card-box-shadow);
   text-align: center;
-  width: 70%;
-  margin-left: 15%;
+  border-radius: 5px;
+  padding: 3%;
+  margin-left: 10%;
 }
