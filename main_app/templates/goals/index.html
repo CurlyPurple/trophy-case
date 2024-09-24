@@ -1,21 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/goals/goal-index.css' %}"/>
+{% endblock %}
+
 {% block content %}
 
+<h1 class="header1">My Goals</h1>
 <section class="card-container">
   {% for goal in goals %}
     <div class="card">
-      {% comment %} Add this line {% endcomment %}
       <a href="{% url 'goal-detail' goal.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            
+          {% if goal.priority < 2 %}
+            <img 
+              src="{% static "images/gold.png" %}"
+              alt="Gold Medal"
+            >
+          {% elif goal.priority == 2 %}
+            <img 
+              src="{% static "images/silver.png" %}"
+              alt="Silver Medal"
+            >
+          {% else %}
+            <img 
+              src="{% static "images/bronze.png" %}"
+              alt="Bronze Medal"
+            >
+          {% endif %}
           </div>
           <h2 class="card-title">{{ goal.name }}</h2>
-          <p>{{ goal.determination }} days a week</p>
+          <p>{{ goal.days }} days a week</p>
         </div>
-      {% comment %} And this line {% endcomment %}
       </a>
     </div>
   {% endfor %}

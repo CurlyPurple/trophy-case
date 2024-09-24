@@ -13,11 +13,26 @@
 
 <section class="goal-container">
   <div class="goal-img">
-    
+  {% if goal.priority < 2 %}
+    <img 
+      src="{% static "images/gold.png" %}"
+      alt="Gold Medal"
+    >
+  {% elif goal.priority == 2 %}
+    <img 
+      src="{% static "images/silver.png" %}"
+      alt="Silver Medal"
+    >
+  {% else %}
+    <img 
+      src="{% static "images/bronze.png" %}"
+      alt="Bronze Medal"
+    >
+  {% endif %}
   </div>
   <div class="goal-details">
     <h1>{{ goal.name }}</h1>
-    <h4>{{ goal.determination }} days a week</h4>
+    <h4>{{ goal.days }} days a week</h4>
     <p>{{ goal.description }}</p>
     <div class="goal-actions">
       <a href="{% url 'goal-update' goal.id %}" class="btn warn">Edit</a>

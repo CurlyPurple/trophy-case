@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+{% endblock %}
 
 {% block content %}
 
 <h1>About Trophy Case</h1>
 <hr />
 <p class="page-content">
-  Here you can set goals and see how youre daily work matches up with the goals set
+  Welcome to Trophy Case! Your personal account to organize and prioritize your goals. You can add goals by naming them, adding a description that further explains what you are trying to accomplish, designating how many days a week you want to attempt this goal, and finally the priority level you want to assign this goal with 1 being the highest priority. Become your best self!
 </p>
 
 {% endblock %}

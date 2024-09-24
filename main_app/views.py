@@ -25,7 +25,7 @@ def goal_detail(request, goal_id):
 
 class GoalCreate(LoginRequiredMixin, CreateView):
   model = Goal
-  fields = ['name', 'description', 'determination']
+  fields = ['name', 'description', 'days', 'priority']
 
   def form_valid(self, form):
     form.instance.user = self.request.user
@@ -33,7 +33,7 @@ class GoalCreate(LoginRequiredMixin, CreateView):
 
 class GoalUpdate(LoginRequiredMixin, UpdateView):
   model = Goal
-  fields = ['name', 'description', 'determination']
+  fields = ['name', 'description', 'days', 'priority']
 
 class GoalDelete(LoginRequiredMixin, DeleteView):
   model = Goal
