@@ -84,3 +84,7 @@ main > section {
     max-width: 520px;
   }
 }
+
+.logo {
+  background-size: cover;
+}

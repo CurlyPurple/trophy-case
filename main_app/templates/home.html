@@ -3,16 +3,11 @@
 
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+
 {% endblock %}
 
 {% block content %}
 
-<section class="logo-container">
-  <div class="goal-container">
-  
-  </div>
-  
-</section>
 {% if not user.is_authenticated %}
   <section>
     <form action="{% url 'home' %}" method="post" class="login">
@@ -23,5 +18,11 @@
       <button type="submit" class="btn submit">Login</button>
     </form>
   </section>
+{% else %}
+  <img 
+  class='logo'
+  src="{% static "images/MyLogo.png" %}"
+  alt="Podium for medaling"
+  >``
 {% endif %}
 {% endblock %}

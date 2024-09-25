@@ -21,10 +21,10 @@ body {
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(104, 197, 248, .7);
+  --nav-bg: #247BA0;
   --nav-bg-ff: rgba(104, 197, 248, .9);
-  --borders: rgb(36, 116, 248) solid 2px;
-  --text-color: rgb(17, 20, 17);
+  --borders: #50514F solid 5px;
+  --text-color: black;
   --link-hover-color: rgb(16, 56, 158);
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
@@ -39,6 +39,7 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
+  background-color: #FFFCFF;
 }
 
 header {
@@ -68,13 +69,16 @@ h2 {
 
 nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: whitesmoke;
   font-weight: 600;
   font-size: 16px;
 }
 
 nav a:hover {
-  color: var(--link-hover-color)
+  color: var(--link-hover-color);
+  border: solid white;
+  border-radius: 5px;
+  background-color: white;
 }
 
 nav ul {
@@ -243,7 +247,6 @@ nav li {
   }
 
   .header-logo-container {
-    /* visual fix to help align logo */
     padding-top: 6px;
     width: 256px;
     height: 35px;
