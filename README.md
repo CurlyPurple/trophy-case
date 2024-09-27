@@ -1,5 +1,5 @@
 # Trophy Case
-![Screenshot of Personal Goals](../trophy-case/main_app/static/images/Screenshot.png)
+![Screenshot of Personal Goals](./main_app/static/images/Screenshot.png)
 
 ## [ACCESS](https://trophy-case-64320a12ed70.herokuapp.com/) Trophy Case:
 
